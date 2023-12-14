@@ -32,7 +32,7 @@ homeTab:AddButton({
   	end    
 })
 
-Local autobuildTab = Window:MakeTab({
+local autobuildTab = Window:MakeTab({
 	Name = "autobuild",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
