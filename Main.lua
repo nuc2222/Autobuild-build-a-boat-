@@ -4,6 +4,13 @@ local Window = OrionLib:MakeWindow({Name = "build a boat autobuild", HidePremium
 -- bootup script
 
 OrionLib:MakeNotification({
+	Name = "loaded",
+	Content = "script successfully loaded! have fun",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+OrionLib:MakeNotification({
 	Name = "Welcom",
 	Content = "script made by vva productions",
 	Image = "rbxassetid://4483345998",
@@ -16,6 +23,13 @@ local homeTab = Window:MakeTab({
 	Name = "home",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+homeTab:AddButton({
+	Name = "destroy gui",
+	Callback = function()
+      		OrionLib:Destroy()
+  	end    
 })
 
 Local autobuildTab = Window:MakeTab({
@@ -31,4 +45,11 @@ autobuildTab:AddTextbox({
 	Callback = function(Value)
 		print(Value)
 	end	  
+})
+
+autobuildTab:AddButton({
+	Name = "build!",
+	Callback = function()
+      		print("button pressed")
+  	end    
 })
