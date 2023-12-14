@@ -26,14 +26,11 @@ autobuildscript:AddTextbox({
 	end	  
 })
 autobuildscript:AddButton({
-	Name = "Button!",
+	Name = "Proceed",
 	Callback = function()
-			for _, key in ipairs(keys) do
-			        if key == _G.inputkey then
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Scripts/Autobuild.lua"))()
-					break
-				end
+			if _G.inputkey == key then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Scripts/Autobuild.lua"))()
 			end
-		end
+	end
 })
 OrionLib:Init()
