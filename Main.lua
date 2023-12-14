@@ -1,56 +1,39 @@
 -- declsre main functions.
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "build a boat autobuild", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
--- bootup script
-
-OrionLib:MakeNotification({
-	Name = "loaded",
-	Content = "script successfully loaded! have fun",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-
-OrionLib:MakeNotification({
-	Name = "Welcom",
-	Content = "script made by vva productions",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-
--- main
-
-local homeTab = Window:MakeTab({
-	Name = "home",
+-- bootup script.
+keys = {
+	"devkey",
+}
+local Tab = autobuildscript:MakeTab({
+	Name = "babft autobuild script",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-homeTab:AddButton({
-	Name = "destroy gui",
-	Callback = function()
-      		OrionLib:Destroy()
-  	end    
-})
-
-local autobuildTab = Window:MakeTab({
-	Name = "autobuild",
+local Tab = babfthubscript:MakeTab({
+	Name = "babft hub script",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-autobuildTab:AddTextbox({
-	Name = "load file name",
+autobuildscript:AddTextbox({
+	Name = "enter key",
 	Default = "",
-	TextDisappear = False,
-	Callback = function(Value)
-		print(Value)
+	TextDisappear = true,
+	Callback = function(key)
+		local _G.inputkey = key
 	end	  
 })
-
-autobuildTab:AddButton({
-	Name = "build!",
+autobuildscript:AddButton({
+	Name = "Button!",
 	Callback = function()
-      		print("button pressed")
-  	end    
+			for _, key in ipairs(keys) do
+			        if key == _G.inputkey then
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Scripts/Autobuild.lua"))()
+					break
+				end
+			end
+		end
 })
 OrionLib:Init()
