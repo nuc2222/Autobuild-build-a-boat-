@@ -20,15 +20,8 @@ autobuildscript:AddTextbox({
 	Default = "",
 	TextDisappear = true,
 	Callback = function(key)
-		inputkey = key
+		if key == keya then
+				
 	end	  
-})
-autobuildscript:AddButton({
-	Name = "Proceed",
-	Callback = function()
-			if inputkey == keya then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Scripts/Autobuild.lua"))()
-			end
-	end
 })
 OrionLib:Init()
