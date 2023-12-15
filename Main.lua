@@ -21,7 +21,7 @@ autobuildscriptTab:AddTextbox({
 	Callback = function(key)
 		if key == keya then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Scripts/Autobuild.lua"))()
-		else then
+		else
 			OrionLib:MakeNotification({
 				Name = "key system",
 				Content = "uh oh it seems youve entered the incorrect key",
