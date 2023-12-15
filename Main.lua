@@ -20,7 +20,8 @@ autobuildscript:AddTextbox({
 	TextDisappear = true,
 	Callback = function(key)
 		if key == keya then
-				
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Scripts/Autobuild.lua'))()
+		end
 	end	  
 })
 OrionLib:Init()
