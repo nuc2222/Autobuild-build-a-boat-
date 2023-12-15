@@ -2,7 +2,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "build a boat autobuild", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 -- bootup script.
-key = "devkey"
+keya = "devkey"
 local Tab = autobuildscript:MakeTab({
 	Name = "babft autobuild script",
 	Icon = "rbxassetid://4483345998",
@@ -20,13 +20,13 @@ autobuildscript:AddTextbox({
 	Default = "",
 	TextDisappear = true,
 	Callback = function(key)
-		local _G.inputkey = key
+		inputkey = key
 	end	  
 })
 autobuildscript:AddButton({
 	Name = "Proceed",
 	Callback = function()
-			if _G.inputkey == key then
+			if inputkey == keya then
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Scripts/Autobuild.lua"))()
 			end
 	end
