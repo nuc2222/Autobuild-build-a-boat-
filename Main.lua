@@ -3,14 +3,14 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "build a boat autobuild", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 -- bootup script.
 keya = "devkey"
-local Tab = autobuildscript:MakeTab({
-	Name = "babft autobuild script",
+local autobuildscriptTab = Window:MakeTab({
+	Name = "Tab 1",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-local Tab = babfthubscript:MakeTab({
-	Name = "babft hub script",
+local vvahubTab = Window:MakeTab({
+	Name = "Tab 1",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
