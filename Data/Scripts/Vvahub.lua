@@ -29,8 +29,8 @@ mainTab:AddToggle({
 	Name = "autofarm gold block",
 	Default = false,
 	Callback = function(Value)
-		while true do
-			if Value == true then
+		while Value == true do
+			if True then
 				local player = game.Players.LocalPlayer
 				local character = player.Character or player.CharacterAdded:Wait()
 				local destination = Vector3.new(-51.5656, 65, 5989)
