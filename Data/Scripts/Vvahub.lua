@@ -29,7 +29,7 @@ mainTab:AddToggle({
 	Name = "autofarm gold block",
 	Default = false,
 	Callback = function(Value)
-		while Value == true do
+		while Value do
 			if True then
 				local player = game.Players.LocalPlayer
 				local character = player.Character or player.CharacterAdded:Wait()
