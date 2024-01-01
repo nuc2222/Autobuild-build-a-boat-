@@ -12,7 +12,7 @@ local function notify(message)
 
     local frame = Instance.new("Frame")
     frame.Size = UDim2.new(0, 200, 0, 50)
-    frame.Position = UDim2.new(1, -220, 1, -70)
+    frame.Position = UDim2.new(1, -190, 1, -70)
     frame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
     frame.BorderSizePixel = 0
     frame.Parent = notification
