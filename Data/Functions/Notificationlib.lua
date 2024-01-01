@@ -9,10 +9,11 @@ local function notify(message)
     local notification = Instance.new("ScreenGui")
     notification.Name = "Notification"
     notification.Parent = playerGui
+    notification.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     local frame = Instance.new("Frame")
     frame.Size = UDim2.new(0, 200, 0, 50)
-    frame.Position = UDim2.new(1, -220, 1, -70)
+    frame.Position = UDim2.new(1, -220, 0, -70) -- Higher initial position
     frame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
     frame.BorderSizePixel = 0
     frame.Parent = notification
@@ -24,17 +25,17 @@ local function notify(message)
     textLabel.TextColor3 = Color3.new(1, 1, 1)
     textLabel.Parent = frame
 
-    notification.Parent = playerGui
-
-    local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+    local tweenInfo = TweenInfo.new(3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out) -- Longer duration
     local goal = {}
     goal.Position = UDim2.new(1, -220, 1, -70)
 
     local tween = TweenService:Create(frame, tweenInfo, goal)
     tween:Play()
 
-    wait(2) -- Adjust the wait time as needed
+    wait(3) -- Adjust the wait time as needed
 
-    tween:Destroy()
+    notification:Destroy()
 end
-notify("Hello, this is a notification!")
+
+notify("Hello, this is an updated notification!")
+
