@@ -1,20 +1,11 @@
 local gameId = 537413528
-local maxServerSize = 3
-local maxPing = 250
+local maxServerSize = 10
 
 -- Function to check if a server meets the requirements
 local function isServerValid(server)
     -- Check server size (number of players)
     if server.playing <= maxServerSize then
-        -- Check server ping
-        if server.ping <= maxPing then
-            -- Check player's team color
-            local player = game.Players.LocalPlayer
-            local teamId = player.TeamColor
-            if teamId == BrickColor.new("White") then
-                return true
-            end
-        end
+        return true
     end
     return false
 end
@@ -26,7 +17,18 @@ local function joinValidServer()
     for _, server in ipairs(servers.data) do
         if isServerValid(server) then
             game:GetService("TeleportService"):TeleportToPlaceInstance(gameId, server.id)
-            break
+            return
+        end
+    end
+
+    -- If no suitable server is found, switch teams and try again
+    local player = game.Players.LocalPlayer
+    player.TeamColor = BrickColor.new("White")
+
+    for _, server in ipairs(servers.data) do
+        if isServerValid(server) then
+            game:GetService("TeleportService"):TeleportToPlaceInstance(gameId, server.id)
+            return
         end
     end
 end
