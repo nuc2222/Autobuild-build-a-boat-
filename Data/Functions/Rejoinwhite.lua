@@ -22,5 +22,5 @@ while true do
         print("enjoy white team")
         break
     end
-    wait() -- Adjust the wait time as needed
+    wait(1) -- Adjust the wait time as needed
 end
