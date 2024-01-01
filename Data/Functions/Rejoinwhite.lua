@@ -1,6 +1,6 @@
 local gameId = 537413528
-local maxServerSize = 10
-local maxPing = 250
+local maxServerSize = 3
+local maxPing = 100
 
 -- Function to check if a server meets the requirements
 local function isServerValid(server)
