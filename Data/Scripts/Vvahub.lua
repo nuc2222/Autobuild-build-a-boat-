@@ -65,3 +65,4 @@ mainTab:AddToggle({
 		end
 	end    
 })
+function tickrun()
