@@ -126,5 +126,5 @@ function tickrun(textinput)
 	end
 end
 while true do wait(0.01)
-		tickrun("GBAUF")
+	tickrun("GBAUF")
 end
