@@ -14,7 +14,7 @@ local function notify(title, content)
 
     local frame = Instance.new("Frame")
     frame.Size = UDim2.new(0, 200, 0, 80)
-    frame.Position = UDim2.new(1, -210, 0.5, -40) -- Right corner, horizontally centered
+    frame.Position = UDim2.new(1, -220, 0.5, -40) -- Right corner, horizontally centered
     frame.AnchorPoint = Vector2.new(1, 0.5)
     frame.BackgroundColor3 = Color3.new(0, 0, 0)
     frame.BorderSizePixel = 0
