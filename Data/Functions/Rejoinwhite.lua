@@ -1,5 +1,5 @@
 local gameId = "537413528"
-local maxServerSize = 66
+local maxServerSize = 1
 
 local function joinRandomServer()
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/"..gameId.."/servers/Public?sortOrder=Asc&limit=100"))
@@ -18,6 +18,8 @@ while true do
     local player = game.Players.LocalPlayer
     if string.lower(player.Team.Name) ~= "white" then
         joinRandomServer()
+    else:
+        break
     end
     wait(5) -- Adjust the wait time as needed
 end
