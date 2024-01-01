@@ -4,8 +4,8 @@ local maxPing = 250
 
 -- Function to check if a server meets the requirements
 local function isServerValid(server)
-    -- Check server size
-    if server.maxPlayers <= maxServerSize then
+    -- Check server size (number of players)
+    if server.playing <= maxServerSize then
         -- Check server ping
         if server.ping <= maxPing then
             -- Check player's team color
