@@ -5,10 +5,15 @@ local maxPing = 100
 -- Function to check if a server meets the requirements
 local function isServerValid(server)
     -- Check server size
-    if server.MaxPlayers <= maxServerSize then
+    if server.maxPlayers <= maxServerSize then
         -- Check server ping
-        if server.Ping <= maxPing then
-            return true
+        if server.ping <= maxPing then
+            -- Check player's team color
+            local player = game.Players.LocalPlayer
+            local teamId = player.TeamColor
+            if teamId == BrickColor.new("White") then
+                return true
+            end
         end
     end
     return false
