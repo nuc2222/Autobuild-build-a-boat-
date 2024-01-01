@@ -14,16 +14,12 @@ end
 local function joinValidServer()
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/"..gameId.."/servers/Public?sortOrder=Asc&limit=100"))
 
-    for _, server in ipairs(servers.data) do
-        if isServerValid(server) then
-            game:GetService("TeleportService"):TeleportToPlaceInstance(gameId, server.id)
-            return
-        end
-    end
-
-    -- If no suitable server is found, switch teams and try again
     local player = game.Players.LocalPlayer
-    player.TeamColor = BrickColor.new("white")
+
+    -- Check if the player is not on the white team
+    if string.lower(player.Team.Name) ~= "white" then
+        player.Team = game.Teams.WhiteTeam
+    end
 
     for _, server in ipairs(servers.data) do
         if isServerValid(server) then
