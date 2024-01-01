@@ -1,4 +1,4 @@
-local gameId = 537413528
+local gameId = "537413528"
 local maxServerSize = 10
 
 -- Function to check if a server meets the requirements
