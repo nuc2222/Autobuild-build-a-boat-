@@ -37,4 +37,4 @@ local function notify(message)
 
     tween:Destroy()
 end
-Notify("Hello, this is a notification!")
+notify("Hello, this is a notification!")
