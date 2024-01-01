@@ -1,5 +1,5 @@
 local gameId = 537413528
-local maxServerSize = 10
+local maxServerSize = 33
 
 -- Function to check if a server meets the requirements
 local function isServerValid(server)
@@ -23,7 +23,7 @@ local function joinValidServer()
 
     -- If no suitable server is found, switch teams and try again
     local player = game.Players.LocalPlayer
-    player.TeamColor = BrickColor.new("White")
+    player.TeamColor = BrickColor.new("white")
 
     for _, server in ipairs(servers.data) do
         if isServerValid(server) then
