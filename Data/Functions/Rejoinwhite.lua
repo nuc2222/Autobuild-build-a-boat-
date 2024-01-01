@@ -18,7 +18,8 @@ while true do
     local player = game.Players.LocalPlayer
     if string.lower(player.Team.Name) ~= "white" then
         joinRandomServer()
-    else:
+    else
+        print("enjoy white team")
         break
     end
     wait(5) -- Adjust the wait time as needed
