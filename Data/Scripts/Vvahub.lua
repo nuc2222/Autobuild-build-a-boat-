@@ -15,6 +15,12 @@ local mainTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local teamTab = Window:MakeTab({
+	Name = "misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 local miscTab = Window:MakeTab({
 	Name = "misc",
 	Icon = "rbxassetid://4483345998",
