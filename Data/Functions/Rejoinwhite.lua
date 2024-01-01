@@ -1,5 +1,5 @@
 local gameId = "537413528"
-local maxServerSize = 6
+local maxServerSize = 2
 
 local function joinRandomServer()
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/"..gameId.."/servers/Public?sortOrder=Asc&limit=100"))
