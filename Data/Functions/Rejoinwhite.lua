@@ -14,13 +14,19 @@ local function joinRandomServer()
     end
 end
 
-while true do
-    local player = game.Players.LocalPlayer
-    if string.lower(player.Team.Name) ~= "white" then
-        joinRandomServer()
-    else
-        print("enjoy white team")
-        break
+local player = game.Players.LocalPlayer
+if player then
+    while true do
+        if string.lower(player.Team.Name) ~= "white" then
+            joinRandomServer()
+        else
+            print("Enjoy the white team!")
+            break
+        end
+        wait(5) -- Adjust the wait time as needed
     end
-    wait(5) -- Adjust the wait time as needed
+else
+    game.Players.PlayerAdded:Connect(function(newPlayer)
+        player = newPlayer
+    end)
 end
