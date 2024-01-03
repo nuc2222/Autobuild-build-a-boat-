@@ -1,7 +1,7 @@
 -- declsre main functions.
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "build a boat scripts", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-keya = loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Keysystem/Getkeyapi.lua"))()
+keya = loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/vvascripts/main/Data/Keysystem/Getkeyapi.lua"))()
 local autobuildscriptTab = Window:MakeTab({
 	Name = "autobuild babft",
 	Icon = "rbxassetid://4483345998",
