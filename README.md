@@ -1,5 +1,5 @@
 ### scripts:
-babft vvahub,
-babft autobuild,
-fe vvahub,
+babft vvahub
+babft autobuild
+fe vvahub
 *comeing soon*
