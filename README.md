@@ -1,4 +1,4 @@
-### scripts:
+### scripts
 babft vvahub
 babft autobuild
 fe vvahub
