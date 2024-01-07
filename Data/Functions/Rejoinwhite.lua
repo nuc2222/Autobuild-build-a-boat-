@@ -1,4 +1,4 @@
-local gameId = "537413528"
+local gamecheck = "537413528"
 local maxServerSize = 4
 
 local function joinRandomServer()
@@ -15,12 +15,21 @@ local function joinRandomServer()
 end
 
 while true do
-    local player = game.Players.LocalPlayer
-    if player and player.Team and string.lower(player.Team.Name) ~= "white" then
-        joinRandomServer()
+    local player = Players.LocalPlayer
+    local gameID = tostring(Game.GameId)
+    
+    if gameID == gamecheck then
+        if player and player.Team and string.lower(player.Team.Name) ~= "white" then
+            print("Hi! Running code for game ID 0000.")
+            -- Your code here
+        else
+            print("Enjoy the white team!")
+            break
+        end
     else
-        print("Enjoy the white team!")
+        print("Invalid game ID. Code will not run.")
         break
     end
+    
     wait(5) -- Adjust the wait time as needed
 end
