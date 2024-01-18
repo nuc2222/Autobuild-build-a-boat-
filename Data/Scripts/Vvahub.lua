@@ -1,7 +1,7 @@
---local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
---local Window = OrionLib:MakeWindow({Name = "Vva babft hub", HidePremium = false, SaveConfig = true, ConfigFolder})
---local TweenService = game:GetService("TweenService")
---local player = game.Players.LocalPlayer
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Vva babft hub", HidePremium = false, SaveConfig = true, ConfigFolder})
+local TweenService = game:GetService("TweenService")
+local player = game.Players.LocalPlayer
 
 local homeTab = Window:MakeTab({
 	Name = "home",
