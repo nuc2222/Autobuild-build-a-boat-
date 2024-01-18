@@ -20,7 +20,7 @@ autobuildscriptTab:AddTextbox({
 	TextDisappear = true,
 	Callback = function(key)
 		if key == keya then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Scripts/Autobuild.lua"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/vvascrips/main/Data/Scripts/Autobuild.lua"))()
 		else
 			OrionLib:MakeNotification({
 				Name = "key system",
@@ -38,7 +38,7 @@ vvahubTab:AddTextbox({
 	TextDisappear = true,
 	Callback = function(key)
 		if key == keya then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/Autobuild-build-a-boat-/main/Data/Scripts/vvahub.lua"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/vvascripts/main/Data/Scripts/vvahub.lua"))()
 		else
 			OrionLib:MakeNotification({
 				Name = "key system",
